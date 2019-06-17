@@ -50,33 +50,77 @@ function genLink($content)
 {
     // mendeteksi type
     preg_match('/<meta name="medium" content="(.*?)" \/>/', $content, $type);
+    preg_match('/<meta property="og:title" content="(.*?)" \/>/', $content, $caption);
+    preg_match('/@(.*?)\)/', $content, $author);
+    preg_match('/<meta content="(.*?) Likes,/', $content, $like);
+    preg_match('/Likes, (.*?) Comments -/', $content, $comment);
     // menemukan type
     if (!empty($type[1])) {
         // jika type video
         if ($type[1] == "video") {
             // video url
             preg_match('/<meta property="og:video" content="(.*?)" \/>/', $content, $videourl);
+
+
+
             // video img
             preg_match('/<meta property="og:image" content="(.*?)" \/>/', $content, $videoimg);
             $res = array(
-                    "status"      => "success",
+                    "code"      => 200,
                     "type"        => "video",
+                    "author"      => $author[1],
+                    "caption"      => $caption[1],
+                    "like"         => $like[1],
+                    "comment"         => $comment[1],
                     "video_url"   => $videourl[1],
                     "video_thumb" => $videoimg[1],
                    );
         } else {
             // type image
             preg_match('/<meta property="og:image" content="(.*?)" \/>/', $content, $image);
-            $res = array(
-                    "status"    => "success",
+            
+            
+            $repl = str_replace("\\u0026","&",$content);
+            preg_match_all('/"display_url":"(.*?)","displ/', $repl, $matches, PREG_PATTERN_ORDER);
+
+            $gambaru = array();
+            for ($i = 0; $i < count($matches[1]); $i++) {
+                $gambaru[] =$matches[1][$i];
+                $total_record = $i;
+            }
+
+            $unique =array_unique($gambaru, SORT_REGULAR);
+            if($total_record > 0){
+                $res = array(
+                    "code"    => 200,
+                    "type"      => "bulk-image",
+                    "author"      => $author[1],
+                    "caption"      => $caption[1],
+                    "like"         => $like[1],
+                    "comment"         => $comment[1],
+                    "images_url" =>  $unique,
+                    "total_record" => $total_record
+                );            
+            }else{
+                $res = array(
+                    "code"    => 200,
                     "type"      => "image",
+                    "author"      => $author[1],
+                    "caption"      => $caption[1],
+                    "like"         => $like[1],
+                    "comment"         => $comment[1],
                     "image_url" => $image[1],
-                   );
+                );
+            }
+            
+            
+
+
         }//end if
     } else {
         // tidak ditemukan type
         $res = array(
-                "status"  => "error",
+                "code"  => "error",
                 "err_msg" => "nothing found!",
                );
     }//end if
