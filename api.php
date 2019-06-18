@@ -85,11 +85,13 @@ function genLink($content)
 
             $gambaru = array();
             for ($i = 0; $i < count($matches[1]); $i++) {
-                $gambaru[] =$matches[1][$i];
+                $gambaru[] = $matches[1][$i];
                 $total_record = $i;
             }
 
-            $unique =array_unique($gambaru, SORT_REGULAR);
+            $out = array_unique($gambaru, SORT_REGULAR);
+
+
             if($total_record > 0){
                 $res = array(
                     "code"    => 200,
@@ -98,7 +100,9 @@ function genLink($content)
                     "caption"      => $caption[1],
                     "like"         => $like[1],
                     "comment"         => $comment[1],
-                    "images_url" =>  $unique,
+                    "images_url" =>  array(
+                        $out
+                    ) ,
                     "total_record" => $total_record
                 );            
             }else{
