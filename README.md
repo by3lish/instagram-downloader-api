@@ -1,19 +1,17 @@
-[![Known Vulnerabilities](https://snyk.io//test/github/abehbatre/MDVK-Kit/badge.svg?targetFile=mdvklibrary/build.gradle)](https://snyk.io//test/github/abehbatre/MDVK-Kit?targetFile=mdvklibrary/build.gradle)
-
 # Instagram-Downloader-API
-new feature : support multiple image (bulk)
-
-#### using example :
 
 
-1.) make sure `xampp / lampp` installed in your fucking machine .
+##№№ İstifadə Qaydası :
 
-2.) clone project to `../../htdocs` **(htdocs folder)**
 
-3.) `http://127.0.0.1/instagram-downloader-api/?url=https://www.instagram.com/p/Byy39R5FVUt/?utm_source=ig_web_copy_link`
+1.) Kompüterinizə `xampp` və ya `lampp` proqramını qurun.
 
-#### output :
-```json
+2.) Bu Reponu ././htdocs qovluğuna kopyalayın və apache server başladın
+
+3.) Brauzerdə bu linkə daxil olun `http://localhost/instagram-downloader-api/?url=PAYLAŞIMIN-LİNKİNİ-BURA-YAZIN`
+
+#### Örnək Output (JSON) :
+```
 {
     "code": 200,
     "type": "bulk-image",
@@ -31,6 +29,5 @@ new feature : support multiple image (bulk)
 }
 ```
 
-#### Dev :
- * @author    ren <ren_ice@live.com>
- * @author    [adit.web.id](https://adit.web.id)
+#### Developer :
+ * @author    Elish <byelish6@gmail.com>
