@@ -1,7 +1,7 @@
 # Instagram-Downloader-API
 
 
-##№№ İstifadə Qaydası :
+## İstifadə Qaydası :
 
 
 1.) Kompüterinizə `xampp` və ya `lampp` proqramını qurun.
