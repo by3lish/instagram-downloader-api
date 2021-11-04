@@ -14,20 +14,15 @@
 ```
 {
     "code": 200,
-    "type": "bulk-image",
-    "author": "kabaraceh",
-    "caption": "Kabar Aceh Indonesia on Instagram: “Kecelakaan Sempati Star vs Xenia, 6 Orang Meninggal Dunia  ACEH TIMUR – Enam orang dilaporkan meninggal dunia dalam kecelakaan lalu lintas…”",
-    "like": "17.2k",
-    "comment": "417",
-    "images_url": [
-        {
-            "0": "https://instagram.fcgk13-1.fna.fbcdn.net/vp/043c82b0cb6f51dd374ca30c271d2116/5DA00C02/t51.2885-15/e35/61710933_441011100028356_1200308344843473952_n.jpg?_nc_ht=instagram.fcgk13-1.fna.fbcdn.net",
-            "2": "https://instagram.fcgk13-1.fna.fbcdn.net/vp/2e13abd5c13663cda3e25ef9264946db/5D8D43CC/t51.2885-15/e35/62259939_496632521075600_2060760074525648447_n.jpg?_nc_ht=instagram.fcgk13-1.fna.fbcdn.net"
-        }
-    ],
-    "total_record": 2
+    "type": "video",
+    "author": "by3lish",
+    "caption": "Elish &lt;/&gt; on Instagram: “i feel like god”",
+    "like": "138",
+    "comment": "0",
+    "video_url": "https://instagram.fgyd3-1.fna.fbcdn.net/v/t50.2886-16/244647545_119253597164745_5294070449227931531_n.mp4?_nc_ht=instagram.fgyd3-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=PeUobi2jC0EAX-dkYyU&edm=AABBvjUBAAAA&ccb=7-4&oe=61865E99&oh=2cb61196514f4ed0df82b73dca52741c&_nc_sid=83d603",
+    "video_thumb": "https://instagram.fgyd3-1.fna.fbcdn.net/v/t51.2885-15/e35/244669139_963199604236919_5260188810383724318_n.jpg?_nc_ht=instagram.fgyd3-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=QfHrAGRLoJcAX87s4Ib&edm=AABBvjUBAAAA&ccb=7-4&oh=3aa344d366d1f3478a425427e0848636&oe=61860A0A&_nc_sid=83d603"
 }
 ```
 
 #### Developer :
- * @author    Elish <byelish6@gmail.com>
+ * @author - Elish <byelish6@gmail.com>
